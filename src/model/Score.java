@@ -1,15 +1,18 @@
 package model;
 
-import java.util.ArrayList;
+import javafx.beans.property.*;
 
 public class Score {
+    StringProperty word = new SimpleStringProperty();
+    IntegerProperty count = new SimpleIntegerProperty();
 
-    private ArrayList<String> given = new ArrayList<String>();
-    private ArrayList<String> input = new ArrayList<String>();
+    public void start() {
+         word.set(RndString.getWord());
+    }
 
-    //TODO:START   -- save the initial generated string() to string array
+    public void checkWord(String input) {
+        if (word.get().equals(input)) count.set(count.get() + 1);
+    }
 
-    //TODO:NEWLINE -- save the user input and new generated string to array
-
-    //TODO:END     -- save the users last input to string array
+    public
 }

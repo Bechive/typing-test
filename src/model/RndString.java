@@ -1,9 +1,13 @@
 package model;
 
+import java.util.Random;
+
 public class RndString {
-    //TODO:START     -- given generated string to controller and score (OUT: string to controller and score)
 
-    //TODO:GETSTRING -- get string of 10 words (IN: user input, OUT: generated string to controller and user input to score)
+    private static String[] words = {"potato", "salad", "is", "not", "a", "filling", "dinner"};
+    private static Random rnd = new Random();
 
-    //TODO: GETWORD  -- get individual words for strings (OUT: word)
+    public static String getWord() {
+        return words[rnd.nextInt(words.length)];
+    }
 }
